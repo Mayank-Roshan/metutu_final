@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 
-    <head><title>  SignUp  </title>
-
-
+    <head><title>  Welcome To Metutu  </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="design.css">
 
@@ -46,27 +46,32 @@
                 <input type="password" id="pass" placeholder="Enter Password" style="width:100%;"required/>
                 <p>Phone Numbeer</p>
                 <input type="text"  value="+91" readonly="readonly" id="phonepreffix" style="width: 32px;"required/>
-                <input type="text"  placeholder="XXXXXXXXXX" id="phone" style="width:128px"required/>
+                <input type="text" pattern="[0-9]"  placeholder="XXXXXXXXXX" id="phone" style="width:128px"required/>
 
-                <div class="radioBtn">
-                    <label><b>I am a:</b></label>
-                    <input type="radio" name="profession"id="Teacher" value="teacher">
-                    <label>Teacher</label>
-                    <input type="radio" name="profession" id="Student" value="student">
-                    <label>Student</label>
-
-                </div>
-                <div class="radioBtn">
-                    <label>Gender</label>
-                    <input type="radio" name="gender" id="male" value="male">
-                    <label>Male</label>
-                    <input type="radio" name="gender" id="female" value="female">
-                    <label>female</label>
-
-                </div>
                 <br/>
+                <label style="color:white;"><b>I am a:</b></label>
+                <input type="radio" name="profession"id="Teacher" value="teacher">
+                <label style="color:white;">Teacher</label>
+                <input type="radio" name="profession" id="Student" value="student">
+                <label style="color:white;">Student</label>
+                <br/>
+
+
+                <label style="color:white;">Gender:</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label style="color:white;">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label style="color:white;">female</label>
+
+
+                <br/>
+                <p>I can teach</p>
+                <input type="text" id="teach" placeholder="what can you teach?" style="width:100%;"/>
+                <p>I am interested in learning</p>
+                <input type="text" id="stu" placeholder="what do you want to learn?" style="width:100%;"/>
+                <br/>
+                <button  id="signUpBtn" type="submit">Sign Up</button><br/>
                 <a href="#" id="signInLoad" style"padding:4px;">Already a User? Sign In</a><br/>
-                <button  id="signUpBtn" type="submit">Sign Up</button>
 
             </form>
         </div>
@@ -81,7 +86,7 @@
       type="text/javascript"></script>
     <!--firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
-    <script src="javascripts/homeJSController.js"></script>
+
     <script src="javascripts/index.js"></script>
 
     </body>

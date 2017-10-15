@@ -68,12 +68,14 @@ $(".signUpBox").submit(function(event){
   var email=$("#email").val();
   var pass=$("#pass").val();
   var phone=$("#phone").val();
-  var prof=document.getElementById("Teacher");
-  if(document.getElementById("Teacher").checked){
-    prof=document.getElementById("Teacher").value;
+  var prof=document.getElementById("teach");
+  if(document.getElementById("teach").checked){
+    prof=document.getElementById("teach").value;
+    $("#teach").show();
   }
   else{
-    prof=document.getElementById("Student").value;
+    prof=document.getElementById("stu").value;
+    $("#stu").show();
   }
   //gender
   var gen=document.getElementById("male");
@@ -116,6 +118,7 @@ var mapStyles = {
 //init map
 function initMap() {
   var pos = {lat: lat, lng: lng};
+  var bounds = new google.maps.LatLngBounds();
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: pos
@@ -123,10 +126,7 @@ function initMap() {
   //changed code here from previous checkpt.
 
 //marker
-  var markerInitial = new google.maps.Marker({
-    position: pos,
-    map: map
-  });
+
 
 
 

@@ -6,7 +6,8 @@ body,html{
   /* Full height */
   height: 100%;
 
-  /* Center and scale the image nicely */
+  /* Center and scale the image nicely background-attachment keeps the background at its place even if content is more than the img height */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,6 +57,18 @@ a{
     z-index: auto;
 }
 
+/*for responsive loginbox and user mage*/
+/*dimensions recieved from https://material.io/devices/*/
+@@media screen and (min-width:720px;),screen and (min-height:1200px;) {
+  .loginBox,.signUpBox{
+    width:100%;
+    height:100%;
+  }
+  .user{
+    width:30%;
+  }
+}
+
 
 
 h2{
@@ -82,7 +95,7 @@ h2{
 
 }
 
-#email,#emailLog,#passLog,#pass,#phone,#phonepreffix,#name,#can_teach,#wanna_learn{
+#email,#emailLog,#passLog,#pass,#phone,#phonepreffix,#name,#teach,#stu{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -90,6 +103,11 @@ h2{
     height:32px;
     color:#fff;
     font-size: 16px;
+}
+
+.profession{
+  display: none;
+  width:100%;
 }
 
 ::placeholder{
@@ -117,10 +135,10 @@ h2{
     left:50%;
     width:352px;
     transform:translate(-50%,-50%);
-    height:624px;
+    height:646px;
     box-sizing: border-box;
     background: rgba(0,0,0,0.35);
-    padding: 80px 40px;
+    padding: 8px 40px;
 }
 
 
@@ -137,11 +155,6 @@ h2{
     margin-bottom:20px;
 
 }
-.signup,.radioBtn label{
-  color:#fff;
-}
-
-
 
 
 /*for button*/
