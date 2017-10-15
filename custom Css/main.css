@@ -1,0 +1,42 @@
+/*Home Page*/
+
+/*left navigation Bar*/
+.leftNav{
+  left:0;
+  top:0;
+  width:25%;
+}
+
+#navMain{
+  background-color:#808080;
+}
+
+.mapHolder{
+  width:100%;
+  height:100%;
+
+}
+
+
+
+.footer{
+    background: rgba(0,0,0,0.0);
+    bottom:0;
+    text-align: center;
+    position:fixed;
+    width:100%;
+}
+
+.header{
+    background: rgba(0,0,0);
+    top:0;
+    text-align: center;
+    position:fixed;
+    width:100%;
+
+}
+
+.header img{
+  height:28px;
+  width:28px;
+}

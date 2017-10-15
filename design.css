@@ -1,0 +1,176 @@
+body,html{
+
+  margin: 0;
+  background-image: url("./images/IMG_41307.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("./images/IMG_41307.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: #808080;
+}
+.MainContainer{
+  position:relative;
+}
+
+.loginBox{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:320px;
+    transform:translate(-50%,-50%);
+    height:420px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.35);
+    padding: 80px 40px;
+}
+
+.user{
+    width:96px;
+    height:96px;
+    border-radius:50%;
+    overflow:hidden;
+    position: absolute;
+    top:calc(-100px/2);
+    left:calc(50% - 50px);
+    z-index: auto;
+}
+
+
+
+h2{
+    margin: 0;
+    padding: 0 0 20px;
+    color: #ffffff;
+    text-align: center;
+
+}
+
+
+.loginBox p{
+    margin: 0;
+    padding: 0;
+    font-weight:bold;
+    color:#fff;
+
+}
+
+
+.loginBox input{
+    width: 100%;
+    margin-bottom:20px;
+
+}
+
+#email,#emailLog,#passLog,#pass,#phone,#phonepreffix,#name,#can_teach,#wanna_learn{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height:32px;
+    color:#fff;
+    font-size: 16px;
+}
+
+::placeholder{
+    color:rgba(255,255,255,.3);
+}
+
+
+
+#logButton,#signUpBtn{
+    width:32%;
+    border:none;
+    outline:none;
+    font-size:16px;
+    background:#808080;
+}
+
+
+
+
+.signUpBox{
+    display:none; /*so that initially signUpBox remains hidden*/
+    margin-top: 64px;
+    position:absolute;
+    top:40%;
+    left:50%;
+    width:352px;
+    transform:translate(-50%,-50%);
+    height:624px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.35);
+    padding: 80px 40px;
+}
+
+
+.signUpBox p{
+    margin: 0;
+    padding: 0;
+    font-weight:bold;
+    color:#fff;
+
+}
+
+
+.signUpBox input{
+    margin-bottom:20px;
+
+}
+.signup,.radioBtn label{
+  color:#fff;
+}
+
+
+
+
+/*for button*/
+.btn{
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+
+
+/*for alert boxes*/
+.alert-box {
+	padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    display: none;
+}
+
+
+.mapView{
+  height:100%;
+  width: 100%;
+  top:0;
+  left:0;
+
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head><title>  SignUp  </title>
+
+
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="design.css">
+
+
+
+    </head>
+
+
+    <body >
+
+
+
+        <div class="mapView" id="map"></div>
+
+
+
+          <div class="loginBox">
+              <img src="internt_web_technology-13-512.png" class="user">
+              <form>
+                  <h2>Welcome to Metutu</h2>
+                  <p>User Email</p>
+                  <input type="text" id="emailLog" placeholder="User Email ID" style="width:100%;"/>
+                  <p>Password</p>
+                  <input type="password" id="passLog" placeholder="Enter Password" style="width:100%;"/>
+                  <input type="submit" id="logButton" value="Sign In"/><br/>
+                  <a href="#">Forgot Password?</a><br>
+                  <a href="#" style="padding: :4px" id="signUpLoad">New User?Sign Up</a>
+              </form>
+
+
+          </div>
+          <div class="signUpBox">
+            <form class="signUpForm" id="signUpForm">
+                <h2>Sign Up to Metutu</h2>
+                <p>Enter Full Name</p>
+                <input type="text" id="name" placeholder="Enter Full Name" style="width:100%;"required/>
+                <p>User Email</p>
+                <input type="email" id="email" placeholder="Enter Valid Gmail ID" style="width:100%;"required/>
+                <p>Password</p>
+                <input type="password" id="pass" placeholder="Enter Password" style="width:100%;"required/>
+                <p>Phone Numbeer</p>
+                <input type="text"  value="+91" readonly="readonly" id="phonepreffix" style="width: 32px;"required/>
+                <input type="text"  placeholder="XXXXXXXXXX" id="phone" style="width:128px"required/>
+
+                <div class="radioBtn">
+                    <label><b>I am a:</b></label>
+                    <input type="radio" name="profession"id="Teacher" value="teacher">
+                    <label>Teacher</label>
+                    <input type="radio" name="profession" id="Student" value="student">
+                    <label>Student</label>
+
+                </div>
+                <div class="radioBtn">
+                    <label>Gender</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label>Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label>female</label>
+
+                </div>
+                <br/>
+                <a href="#" id="signInLoad" style"padding:4px;">Already a User? Sign In</a><br/>
+                <button  id="signUpBtn" type="submit">Sign Up</button>
+
+            </form>
+        </div>
+      </div>
+
+
+    <!--jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <!-- google maps-->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAPr-gKEYwscZ3kB_QllySGxeG7j-FwHY"
+      type="text/javascript"></script>
+    <!--firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script src="javascripts/homeJSController.js"></script>
+    <script src="javascripts/index.js"></script>
+
+    </body>
+</html>
