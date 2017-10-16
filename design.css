@@ -59,7 +59,8 @@ a{
 
 /*for responsive loginbox and user mage*/
 /*dimensions recieved from https://material.io/devices/*/
-@@media screen and (min-width:720px;),screen and (min-height:1200px;) {
+
+@media screen and (min-width:320px;),screen and (min-height:480px;) {
   .loginBox,.signUpBox{
     width:100%;
     height:100%;
