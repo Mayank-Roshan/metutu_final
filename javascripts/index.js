@@ -34,7 +34,7 @@ function getUserLoc() {
 
 //firebase write call
 //write to firebase
-function writeUserData(name, email,pass,phone, prof, gen,lat, lng) {
+function writeUserData(name, email,pass,phone,prof,gen,lat,lng,teach,studies) {
   firebase.database().ref('users/' + phone).set({
     username: name,
     email:email,
@@ -42,7 +42,9 @@ function writeUserData(name, email,pass,phone, prof, gen,lat, lng) {
     phone: phone,
     profession : prof,
     latitude: lat,
-    longitude: lng
+    longitude: lng,
+    teaches:teach,
+    studies:studies
   });
 }
 
@@ -68,14 +70,16 @@ $(".signUpBox").submit(function(event){
   var email=$("#email").val();
   var pass=$("#pass").val();
   var phone=$("#phone").val();
-  var prof=document.getElementById("teach");
-  if(document.getElementById("teach").checked){
-    prof=document.getElementById("teach").value;
-    $("#teach").show();
+  var teach=$("#teach").val();
+  var studies=$("#stu").val();
+  var prof=document.getElementById("Teacher");
+  if(document.getElementById("Teacher").checked){
+    prof=document.getElementById("Teacher").value;
+
   }
   else{
-    prof=document.getElementById("stu").value;
-    $("#stu").show();
+    prof=document.getElementById("Student").value;
+
   }
   //gender
   var gen=document.getElementById("male");
@@ -86,8 +90,8 @@ $(".signUpBox").submit(function(event){
     gen=document.getElementById("female").value;
   }
 
-  console.log(name,email,pass,phone,prof,gen,lat,lng);
-  writeUserData(name, email,pass,phone, prof, gen,lat, lng);
+  console.log(name,email,pass,phone,prof,gen,lat,lng,teach,studies);
+  writeUserData(name,email,pass,phone, prof,gen,lat,lng,teach,studies);
   //adding conformation
   alert("Data Saved");
 
