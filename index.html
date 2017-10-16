@@ -30,7 +30,7 @@
                   <input type="password" id="passLog" placeholder="Enter Password" style="width:100%;"/>
                   <input type="submit" id="logButton" value="Sign In"/><br/>
                   <a href="#">Forgot Password?</a><br>
-                  <a href="#" style="padding: :4px" id="signUpLoad">New User?Sign Up</a>
+                  <a href="#" style="padding: :4px" id="signUpLoad" id="signInBtn">New User?Sign Up</a>
               </form>
 
 
@@ -46,7 +46,7 @@
                 <input type="password" id="pass" placeholder="Enter Password" style="width:100%;"required/>
                 <p>Phone Numbeer</p>
                 <input type="text"  value="+91" readonly="readonly" id="phonepreffix" style="width: 32px;"required/>
-                <input type="text" pattern="[0-9]{10,13}" title="Only numbers,noo special characters" placeholder="XXXXXXXXXX" id="phone" style="width:128px"required/>
+                <input type="text" pattern="[0-9]{10,13}" title="Only digits,no special characters,10-12 characters max" placeholder="XXXXXXXXXX" id="phone" style="width:128px"required/>
 
 
                 <br/>
@@ -82,8 +82,9 @@
     <!--jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <!-- google maps-->
+
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAPr-gKEYwscZ3kB_QllySGxeG7j-FwHY"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAPr-gKEYwscZ3kB_QllySGxeG7j-FwHY&libraries=geometry"
       type="text/javascript"></script>
     <!--firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>

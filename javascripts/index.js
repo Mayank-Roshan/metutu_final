@@ -102,6 +102,16 @@ $(".signUpBox").submit(function(event){
 
 });
 
+//signIn functionality
+$().submit(function() {
+    var email=$().val();
+    var password=$().val();
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithRedirect(provider);
+});
+
+
+
 
 var mapStyles = {
         default: null,
@@ -133,7 +143,6 @@ function initMap() {
 
 
 
-
   var infoWindow = new google.maps.InfoWindow({
     content: 'Info here'
   });
@@ -151,25 +160,26 @@ function initMap() {
     var center = map.getCenter();
     google.maps.event.trigger(map, "resize");
     map.setCenter(center);
-    map.setOptions({styles: styles['hide']});
+    map.setOptions({styles: mapStyles['hide']});
   });
 
 
   var data=firebase.database();
   var dataRef=firebase.database().ref("users/");
-  dataRef.on("child_added",function(){
+  dataRef.on("child_added",function(data){
     var ref=dataRef.key;
     const userElement=data.val();
     var latData=userElement.latitude;
     var lngData=userElement.longitude;
+    console.log("latitude=>"+latData);
     var _kCord = new google.maps.LatLng(latData, lngData);
     var _pCord = new google.maps.LatLng(latData, lngData);
-    var dist = google.maps.geometry.spherical.computeDistanceBetween(_pCord, _kCord);
+    var dist = google.maps.geometry.spherical.computeDistanceBetween(_pCord,_kCord);
     if (dist < 1000)
       {
-        const name = userelement.username;
-        const phone = userelement.phone;
-        const prof = userelement.profession;
+        const name = userElement.username;
+        const phone = userElement.phone;
+        const prof = userElement.profession;
         var marker = [name, latData, lngData];
         var pos = new google.maps.LatLng(marker[1], marker[2]);
         bounds.extend(pos);
@@ -179,7 +189,7 @@ function initMap() {
             map: map,
             animation: google.maps.Animation.DROP,
             title: marker[0],
-            icon:'blue-map-marker-png-image-2958.png',
+            icon:'myMarker.png',
             label: prof.charAt(0).toUpperCase()
         });
         marker.addListener('click', function() {
